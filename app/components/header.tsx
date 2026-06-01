@@ -3,8 +3,9 @@ import Link from "next/link";
 export function Header({ activePage = "home" }: { activePage?: string }) {
   const navLinks = [
     { href: "/", label: "Home", id: "home" },
-    { href: "/#quem-somos", label: "Quem Somos", id: "quem-somos" },
+    { href: "/quem-somos", label: "Quem Somos", id: "quem-somos" },
     { href: "/voluntariado", label: "Voluntariado", id: "voluntariado" },
+    { href: "/doacao", label: "Doação", id: "doacao" },
     { href: "/#contato", label: "Contato", id: "contato" },
   ];
 
@@ -41,7 +42,7 @@ export function Header({ activePage = "home" }: { activePage?: string }) {
 
           <div className="flex items-center gap-4">
             <Link
-              href="/#doe"
+              href="/doacao"
               className="hidden sm:inline-flex h-10 items-center justify-center rounded-full bg-gold px-5 text-sm font-semibold text-background hover:bg-gold-hover transition-colors duration-200"
             >
               Doe Agora

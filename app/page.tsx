@@ -43,13 +43,13 @@ function HeroSection() {
             </p>
             <div className="mt-8 flex flex-col sm:flex-row gap-4">
               <Link
-                href="#doe"
+                href="/doacao"
                 className="inline-flex h-12 items-center justify-center rounded-full bg-gold px-8 text-base font-semibold text-background hover:bg-gold-hover transition-colors duration-200"
               >
                 Doe Agora
               </Link>
               <Link
-                href="#quem-somos"
+                href="/quem-somos"
                 className="inline-flex h-12 items-center justify-center rounded-full border border-border px-8 text-base font-semibold text-foreground hover:bg-surface-light transition-colors duration-200"
               >
                 Saiba Mais
@@ -155,7 +155,7 @@ function ApproachSection() {
               </div>
             </div>
             <Link
-              href="#quem-somos"
+              href="/quem-somos"
               className="mt-8 inline-flex items-center gap-2 text-sm font-semibold text-gold hover:text-gold-light transition-colors duration-200"
             >
               Saiba mais sobre o projeto
@@ -186,13 +186,13 @@ function CTASection() {
         </p>
         <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
           <Link
-            href="#doe"
+            href="/doacao"
             className="inline-flex h-12 items-center justify-center rounded-full bg-gold px-8 text-base font-semibold text-background hover:bg-gold-hover transition-colors duration-200"
           >
             Doe Agora
           </Link>
           <Link
-            href="#voluntariado"
+            href="/voluntariado"
             className="inline-flex h-12 items-center justify-center rounded-full border border-border px-8 text-base font-semibold text-foreground hover:bg-surface-light transition-colors duration-200"
           >
             Outras formas de ajuda
