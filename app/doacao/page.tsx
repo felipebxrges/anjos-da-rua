@@ -2,12 +2,12 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import {
   QrCode,
-  Copy,
   ShieldCheck,
   Sparkles,
 } from "lucide-react";
 import { Header } from "../components/header";
 import { Footer } from "../components/footer";
+import { CopyButton } from "../components/copy-button";
 
 export const metadata: Metadata = {
   title: "Doação - Anjos da Rua",
@@ -45,20 +45,13 @@ function HeroPixSection() {
 
             <div className="mt-8 rounded-xl border border-border bg-surface-light p-5 max-w-md">
               <p className="text-xs text-text-muted uppercase tracking-wide">
-                Chave Pix (CNPJ)
+                Chave Pix (CPF)
               </p>
               <div className="mt-2 flex items-center justify-between gap-4">
                 <p className="text-base sm:text-lg font-mono text-foreground">
-                  12.345.678/0001-90
+                  01055122737
                 </p>
-                <button
-                  type="button"
-                  className="inline-flex h-9 items-center gap-2 rounded-full bg-gold px-4 text-xs font-semibold text-background hover:bg-gold-hover transition-colors duration-200 cursor-pointer"
-                  aria-label="Copiar chave Pix"
-                >
-                  <Copy className="h-3.5 w-3.5" aria-hidden="true" />
-                  Copiar
-                </button>
+                <CopyButton text="01055122737" />
               </div>
             </div>
 
@@ -113,7 +106,7 @@ function HeroPixSection() {
                   QR Code Pix
                 </p>
                 <p className="mt-1 text-xs text-text-muted">
-                  Anjos da Rua - CNPJ 12.345.678/0001-90
+                  Anjos da Rua - CPF 01055122737
                 </p>
                 <p className="mt-4 text-xs text-text-muted leading-relaxed max-w-xs">
                   Aponte a câmera do seu aplicativo bancário e confirme o

@@ -1,11 +1,10 @@
 import {
-  Users,
   Home,
   ArrowRight,
   Utensils,
-  BookOpen,
 } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 import { Header } from "./components/header";
 import { Footer } from "./components/footer";
 
@@ -50,7 +49,7 @@ function HeroSection() {
               </Link>
               <Link
                 href="/quem-somos"
-                className="inline-flex h-12 items-center justify-center rounded-full border border-border px-8 text-base font-semibold text-foreground hover:bg-surface-light transition-colors duration-200"
+                className="inline-flex h-12 items-center justify-center rounded-full border border-border bg-background/80 backdrop-blur-sm px-8 text-base font-semibold text-foreground hover:bg-background transition-colors duration-200"
               >
                 Saiba Mais
               </Link>
@@ -71,10 +70,13 @@ function VolunteerSection() {
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <div className="relative aspect-[4/3] rounded-2xl overflow-hidden bg-surface-light">
-            <div className="absolute inset-0 flex items-center justify-center">
-              <Users className="h-24 w-24 text-border" aria-hidden="true" />
-            </div>
+          <div className="relative aspect-[4/3] rounded-2xl overflow-hidden">
+            <Image
+              src="/homevoluntario.jpg"
+              alt="Voluntários do Anjos da Rua"
+              fill
+              className="object-cover"
+            />
           </div>
 
           <div className="bg-surface-light rounded-2xl p-8 sm:p-10 border border-border">
@@ -142,15 +144,6 @@ function ApproachSection() {
                 <h3 className="text-sm font-semibold">Moradia</h3>
                 <p className="text-xs text-text-muted leading-relaxed">
                   Encaminhamento para abrigos e programas habitacionais.
-                </p>
-              </div>
-              <div className="flex flex-col items-start gap-3">
-                <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-gold/10">
-                  <BookOpen className="h-5 w-5 text-gold" aria-hidden="true" />
-                </div>
-                <h3 className="text-sm font-semibold">Educação</h3>
-                <p className="text-xs text-text-muted leading-relaxed">
-                  Cursos profissionalizantes e alfabetização de adultos.
                 </p>
               </div>
             </div>
