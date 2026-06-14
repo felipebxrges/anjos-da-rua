@@ -3,7 +3,6 @@ import Link from "next/link";
 import {
   UtensilsCrossed,
   HeartHandshake,
-  GraduationCap,
   ShieldCheck,
   Clock,
   CircleDot,
@@ -69,13 +68,6 @@ function AreasSection() {
         "Suporte direto às famílias, auxiliando no cadastro para programas sociais e encaminhamento de saúde.",
       topics: ["Atendimento individual", "Triagem de necessidades"],
     },
-    {
-      icon: GraduationCap,
-      title: "Aulas & Oficinas",
-      description:
-        "Compartilhe conhecimento técnico ou artístico para auxiliar na reincorporação profissional e autonomia.",
-      topics: ["Alfabetização", "Capacitação técnica"],
-    },
   ];
 
   return (
@@ -86,16 +78,16 @@ function AreasSection() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <h2
           id="areas-heading"
-          className="text-2xl sm:text-3xl font-bold text-background"
+          className="text-2xl sm:text-3xl font-bold text-background text-center"
         >
           Onde você pode atuar
         </h2>
 
-        <div className="mt-12 grid md:grid-cols-3 gap-8">
+        <div className="mt-12 grid md:grid-cols-2 gap-8 max-w-2xl mx-auto">
           {areas.map((area) => {
             const Icon = area.icon;
             return (
-              <div key={area.title} className="flex flex-col">
+              <div key={area.title} className="flex flex-col items-center text-center">
                 <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-background/10 mb-5">
                   <Icon
                     className="h-6 w-6 text-background"
@@ -112,7 +104,7 @@ function AreasSection() {
                   {area.topics.map((topic) => (
                     <li
                       key={topic}
-                      className="flex items-center gap-2 text-sm text-background/80"
+                      className="flex items-center justify-center gap-2 text-sm text-background/80"
                     >
                       <CircleDot
                         className="h-3 w-3 text-background/50 shrink-0"
@@ -139,130 +131,50 @@ function FormSection() {
       aria-labelledby="form-heading"
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
-          <div>
+        <div className="max-w-xl mx-auto text-center">
             <h2
               id="form-heading"
               className="text-3xl sm:text-4xl font-bold"
             >
               Pronto para começar?
             </h2>
-            <p className="mt-4 text-text-muted leading-relaxed max-w-md">
-              Preencha o formulário e nossa equipe de coordenação entrará em
-              contato em até 48 horas para agendar uma conversa inicial e
-              integração.
+            <p className="mt-4 text-text-muted leading-relaxed">
+              Entre em contato pelo WhatsApp e nossa equipe de coordenação
+              vai te orientar sobre as próximas etapas.
             </p>
-
-            <div className="mt-10 space-y-6">
+            <div className="mt-10 space-y-6 text-left">
               <div className="flex items-start gap-4">
                 <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-gold/10">
-                  <ShieldCheck
-                    className="h-5 w-5 text-gold"
-                    aria-hidden="true"
-                  />
+                  <ShieldCheck className="h-5 w-5 text-gold" aria-hidden="true" />
                 </div>
                 <div>
                   <h3 className="text-sm font-semibold">Ambiente Seguro</h3>
                   <p className="mt-1 text-sm text-text-muted leading-relaxed">
-                    Oferecemos todo o suporte e treinamento necessário para sua
-                    atuação.
+                    Oferecemos todo o suporte e treinamento necessário para sua atuação.
                   </p>
                 </div>
               </div>
               <div className="flex items-start gap-4">
                 <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-gold/10">
-                  <Clock
-                    className="h-5 w-5 text-gold"
-                    aria-hidden="true"
-                  />
+                  <Clock className="h-5 w-5 text-gold" aria-hidden="true" />
                 </div>
                 <div>
                   <h3 className="text-sm font-semibold">Flexibilidade</h3>
                   <p className="mt-1 text-sm text-text-muted leading-relaxed">
-                    Escalas que se adaptam à sua rotina, doações de tempo
-                    semanal ou quinzenal.
+                    Escalas que se adaptam à sua rotina, doações de tempo semanal ou quinzenal.
                   </p>
                 </div>
               </div>
             </div>
+            <a
+              href="https://wa.me/5532991111437"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-10 inline-flex h-12 items-center justify-center rounded-full bg-gold px-8 text-base font-semibold text-background hover:bg-gold-hover transition-colors duration-200"
+            >
+              Falar pelo WhatsApp
+            </a>
           </div>
-
-          <div className="bg-surface-light rounded-2xl p-8 sm:p-10 border border-border">
-            <form className="space-y-5">
-              <div>
-                <label
-                  htmlFor="nome"
-                  className="block text-sm font-medium mb-2"
-                >
-                  Nome Completo
-                </label>
-                <input
-                  type="text"
-                  id="nome"
-                  name="nome"
-                  placeholder="Como podemos te chamar?"
-                  required
-                  className="w-full h-12 rounded-lg border border-border bg-background px-4 text-sm text-foreground placeholder:text-text-muted focus:outline-none focus:ring-2 focus:ring-gold/50 focus:border-gold transition-colors duration-200"
-                />
-              </div>
-
-              <div>
-                <label
-                  htmlFor="email"
-                  className="block text-sm font-medium mb-2"
-                >
-                  E-mail
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  placeholder="seu@email.com"
-                  required
-                  className="w-full h-12 rounded-lg border border-border bg-background px-4 text-sm text-foreground placeholder:text-text-muted focus:outline-none focus:ring-2 focus:ring-gold/50 focus:border-gold transition-colors duration-200"
-                />
-              </div>
-
-              <div>
-                <label
-                  htmlFor="area"
-                  className="block text-sm font-medium mb-2"
-                >
-                  Área de Interesse
-                </label>
-                <select
-                  id="area"
-                  name="area"
-                  required
-                  className="w-full h-12 rounded-lg border border-border bg-background px-4 text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-gold/50 focus:border-gold transition-colors duration-200 appearance-none"
-                >
-                  <option value="" disabled selected>
-                    Selecione uma área
-                  </option>
-                  <option value="cozinha">Cozinha Solidária</option>
-                  <option value="assistencia">Assistência Social</option>
-                  <option value="aulas">Aulas &amp; Oficinas</option>
-                  <option value="outro">Outro</option>
-                </select>
-              </div>
-
-              <p className="text-xs text-text-muted pt-2">
-                Ao enviar, você concorda com nossa{" "}
-                <Link href="#" className="text-gold hover:text-gold-light">
-                  Política de Privacidade
-                </Link>
-                .
-              </p>
-
-              <button
-                type="submit"
-                className="w-full h-12 rounded-full bg-gold text-base font-semibold text-background hover:bg-gold-hover transition-colors duration-200 cursor-pointer"
-              >
-                Enviar Intenção
-              </button>
-            </form>
-          </div>
-        </div>
       </div>
     </section>
   );
