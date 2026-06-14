@@ -1,10 +1,5 @@
 import type { Metadata } from "next";
-import {
-  PlayCircle,
-  Users,
-  Calendar,
-  MapPin,
-} from "lucide-react";
+import Image from "next/image";
 import { Header } from "../components/header";
 import { Footer } from "../components/footer";
 
@@ -34,47 +29,26 @@ function StorySection() {
               <span className="text-gold italic">começou</span>
             </h1>
             <p className="mt-6 text-text-muted leading-relaxed">
-              Em 2015, um pequeno grupo de amigos do bairro do Centro decidiu
-              que não bastava sentir compaixão pelas pessoas em situação de
-              rua — era preciso agir. Começamos com a entrega de cerca de 30
-              marmitas todas as sextas-feiras embaixo do viaduto da Avenida
-              Brasil.
+              A Associação Anjos da Rua nasceu há mais de onze anos a partir da iniciativa e da solidariedade de pessoas voluntárias comprometidas em fazer a diferença na vida de quem mais precisa. Movidos pelo desejo de promover dignidade, acolhimento e esperança, esses voluntários passaram a dedicar seu tempo e esforço ao atendimento de pessoas em situação de rua.
             </p>
             <p className="mt-4 text-text-muted leading-relaxed">
-              O que era um gesto de solidariedade semanal cresceu, ganhou
-              voluntários, parceiros e uma sede própria em 2018. Hoje,
-              atendemos famílias com programas de alimentação, capacitação,
-              saúde mental e moradia.
+              Desde então, a associação desenvolve um trabalho contínuo de assistência social, levando alimentos, água potável, roupas, produtos de higiene e outros itens essenciais para aqueles que enfrentam condições de extrema vulnerabilidade. Mais do que suprir necessidades básicas, a Anjos da Rua oferece cuidado, atenção, escuta e respeito, fortalecendo vínculos humanos e contribuindo para a reconstrução da autoestima e da cidadania dessas pessoas.
             </p>
             <p className="mt-4 text-text-muted leading-relaxed">
-              Acreditamos que ninguém deve passar fome, frio ou esquecimento.
-              Cada pessoa atendida é tratada com respeito, ouvida com atenção
-              e acolhida com dignidade.
+              Ao longo de sua trajetória, a associação tem sido um importante instrumento de transformação social, mobilizando voluntários, parceiros e doadores em torno de uma causa comum: levar amor, solidariedade e oportunidades para quem vive à margem da sociedade, promovendo inclusão e esperança para um futuro melhor.
             </p>
           </div>
 
           <div className="relative">
             <div className="absolute -inset-4 bg-gold/10 rounded-3xl blur-2xl" />
-            <div className="relative aspect-video rounded-2xl overflow-hidden bg-surface-light border border-border group cursor-pointer">
-              <div className="absolute inset-0 flex flex-col items-center justify-center gap-3">
-                <PlayCircle
-                  className="h-20 w-20 text-gold group-hover:text-gold-light transition-colors duration-200"
-                  aria-hidden="true"
-                />
-                <p className="text-sm text-text-muted">
-                  Espaço reservado para o vídeo institucional
-                </p>
-              </div>
-              <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between text-xs text-text-muted">
-                <span className="flex items-center gap-1.5">
-                  <Calendar className="h-3.5 w-3.5" aria-hidden="true" />
-                  Em breve
-                </span>
-                <span className="flex items-center gap-1.5">
-                  <MapPin className="h-3.5 w-3.5" aria-hidden="true" />
-                  Sede - Centro
-                </span>
-              </div>
+            <div className="relative aspect-video rounded-2xl overflow-hidden border border-border">
+              <iframe
+                src="https://www.youtube.com/embed/XZUkCgeHiTs"
+                title="Vídeo institucional - Anjos da Rua"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                className="absolute inset-0 h-full w-full"
+              />
             </div>
           </div>
         </div>
@@ -86,24 +60,19 @@ function StorySection() {
 function TeamSection() {
   const team = [
     {
-      name: "Maria Aparecida Souza",
-      role: "Fundadora e Diretora Executiva",
-      bio: "Assistente social com 20 anos de experiência em projetos sociais.",
+      name: "Lúcia Moreira",
+      role: "Coordenadora",
+      photo: "/fotosQuemSomos/luciamoreira.jpg",
     },
     {
-      name: "Carlos Henrique Lima",
-      role: "Coordenador de Operações",
-      bio: "Responsável pela logística de distribuição e parcerias.",
+      name: "Iure Lopes",
+      role: "Voluntário",
+      photo: "/fotosQuemSomos/iurelopes.jpg",
     },
     {
-      name: "Juliana Ferreira",
-      role: "Coordenadora de Voluntariado",
-      bio: "Cuida da integração e formação dos nossos voluntários.",
-    },
-    {
-      name: "Roberto Almeida",
-      role: "Psicólogo Voluntário",
-      bio: "Lidera o programa de saúde mental e escuta terapêutica.",
+      name: "Cláudia Guzzo",
+      role: "Voluntária",
+      photo: "/fotosQuemSomos/claudiaguzzo.jpg",
     },
   ];
 
@@ -126,21 +95,23 @@ function TeamSection() {
           </p>
         </div>
 
-        <div className="mt-12 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="mt-12 grid sm:grid-cols-3 gap-6">
           {team.map((member) => (
             <div
               key={member.name}
               className="bg-surface-light rounded-2xl p-6 border border-border"
             >
-              <div className="flex h-14 w-14 items-center justify-center rounded-full bg-gold/10 mb-4">
-                <Users className="h-6 w-6 text-gold" aria-hidden="true" />
+              <div className="relative h-14 w-14 rounded-full overflow-hidden mb-4">
+                <Image
+                  src={member.photo}
+                  alt={member.name}
+                  fill
+                  className="object-cover"
+                />
               </div>
               <h3 className="text-base font-bold">{member.name}</h3>
               <p className="mt-1 text-xs text-gold font-medium">
                 {member.role}
-              </p>
-              <p className="mt-3 text-sm text-text-muted leading-relaxed">
-                {member.bio}
               </p>
             </div>
           ))}
