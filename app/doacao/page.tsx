@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import {
-  QrCode,
   ShieldCheck,
   Sparkles,
 } from "lucide-react";
@@ -30,7 +30,7 @@ function HeroPixSection() {
             </p>
             <h1
               id="doa-hero-heading"
-              className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight tracking-tight"
+              className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight tracking-tight"
             >
               Doe e transforme
               <br />
@@ -93,13 +93,15 @@ function HeroPixSection() {
 
           <div className="relative">
             <div className="absolute -inset-4 bg-gold/10 rounded-3xl blur-2xl" />
-            <div className="relative bg-surface-light rounded-2xl p-8 sm:p-10 border border-border">
+            <div className="relative bg-surface-light rounded-2xl p-6 sm:p-8 border border-border">
               <div className="flex flex-col items-center text-center">
-                <div className="relative aspect-square w-full max-w-[280px] rounded-xl bg-foreground p-6 flex items-center justify-center">
-                  <QrCode
-                    className="h-full w-full text-background"
-                    aria-hidden="true"
-                    strokeWidth={1}
+                <div className="relative aspect-square w-full max-w-[280px] rounded-xl overflow-hidden bg-white p-3">
+                  <Image
+                    src="/qrcode.png"
+                    alt="QR Code Pix - Anjos da Rua"
+                    fill
+                    className="object-contain"
+                    unoptimized
                   />
                 </div>
                 <p className="mt-6 text-sm font-semibold text-foreground">
