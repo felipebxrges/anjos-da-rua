@@ -47,7 +47,7 @@ function ContactSection() {
           </p>
           <h1
             id="contato-heading"
-            className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight tracking-tight"
+            className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight tracking-tight"
           >
             Estamos por{" "}
             <span className="text-gold italic">perto</span>
@@ -58,7 +58,7 @@ function ContactSection() {
           </p>
         </div>
 
-        <div className="mt-12 grid sm:grid-cols-3 gap-6">
+        <div className="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
           {channels.map((channel) => {
             const Icon = channel.icon;
             const content = (
