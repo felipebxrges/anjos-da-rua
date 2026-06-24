@@ -28,7 +28,7 @@ function HeroSection() {
         </p>
         <h1
           id="vol-hero-heading"
-          className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight tracking-tight max-w-3xl mx-auto"
+          className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight tracking-tight max-w-3xl mx-auto"
         >
           Sua mão amiga pode
           <br />
@@ -170,7 +170,7 @@ function FormSection() {
               href="https://wa.me/5532991111437"
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-10 inline-flex h-12 items-center justify-center rounded-full bg-gold px-8 text-base font-semibold text-background hover:bg-gold-hover transition-colors duration-200"
+              className="mt-10 inline-flex w-full sm:w-auto h-12 items-center justify-center rounded-full bg-gold px-8 text-base font-semibold text-background hover:bg-gold-hover transition-colors duration-200"
             >
               Falar pelo WhatsApp
             </a>
