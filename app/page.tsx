@@ -17,10 +17,10 @@ function HeroSection() {
       aria-labelledby="hero-heading"
     >
       <div
-        className="relative min-h-[600px] sm:min-h-[700px] lg:min-h-[780px] bg-cover bg-center bg-no-repeat"
+        className="relative min-h-[560px] sm:min-h-[680px] lg:min-h-[780px] bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: "url('/imagemhome.jpeg')" }}
       >
-        <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/75 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/85 to-background/60 sm:to-transparent" />
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 sm:py-24 lg:py-32">
           <div className="max-w-lg">
             <p className="text-sm text-text-muted mb-4">
@@ -28,7 +28,7 @@ function HeroSection() {
             </p>
             <h1
               id="hero-heading"
-              className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight tracking-tight"
+              className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight tracking-tight"
             >
               Transformando Vidas
               <br />
@@ -69,7 +69,7 @@ function VolunteerSection() {
       aria-labelledby="volunteer-heading"
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           <div className="relative aspect-[4/3] rounded-2xl overflow-hidden">
             <Image
               src="/homevoluntario.jpg"
@@ -79,7 +79,7 @@ function VolunteerSection() {
             />
           </div>
 
-          <div className="bg-surface-light rounded-2xl p-8 sm:p-10 border border-border">
+          <div className="bg-surface-light rounded-2xl p-6 sm:p-8 border border-border">
             <h2
               id="volunteer-heading"
               className="text-2xl sm:text-3xl font-bold"
@@ -124,7 +124,7 @@ function ApproachSection() {
               reconstrução de uma vida. Nosso modelo de ação atua em saúde
               mental, moradia e educação.
             </p>
-            <div className="mt-8 grid sm:grid-cols-3 gap-6">
+            <div className="mt-8 grid sm:grid-cols-2 gap-6">
               <div className="flex flex-col items-start gap-3">
                 <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-gold/10">
                   <Utensils

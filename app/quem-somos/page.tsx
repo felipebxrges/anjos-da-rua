@@ -16,14 +16,14 @@ function StorySection() {
       aria-labelledby="historia-heading"
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-8 sm:pt-10 lg:pt-12 pb-16 sm:pb-20 lg:pb-24">
-        <div className="grid lg:grid-cols-2 gap-10 lg:gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           <div>
             <p className="text-sm font-medium text-gold mb-4 tracking-wide uppercase">
               Nossa História
             </p>
             <h1
               id="historia-heading"
-              className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight tracking-tight"
+              className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight tracking-tight"
             >
               Como tudo{" "}
               <span className="text-gold italic">começou</span>
@@ -39,14 +39,15 @@ function StorySection() {
             </p>
           </div>
 
-          <div className="relative">
+          <div className="relative mx-auto w-full max-w-[400px]">
             <div className="absolute -inset-4 bg-gold/10 rounded-3xl blur-2xl" />
-            <div className="relative aspect-video rounded-2xl overflow-hidden border border-border">
+            <div className="relative aspect-[9/16] rounded-2xl overflow-hidden border border-border">
               <iframe
-                src="https://www.youtube.com/embed/XZUkCgeHiTs"
+                src="https://www.instagram.com/reel/DKX5H6pxn_n/embed"
                 title="Vídeo institucional - Anjos da Rua"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
+                scrolling="no"
                 className="absolute inset-0 h-full w-full"
               />
             </div>
@@ -95,7 +96,7 @@ function TeamSection() {
           </p>
         </div>
 
-        <div className="mt-12 grid sm:grid-cols-3 gap-6">
+        <div className="mt-12 grid sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
           {team.map((member) => (
             <div
               key={member.name}
